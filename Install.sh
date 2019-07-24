@@ -97,7 +97,6 @@ RPCUSER=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 RPCPASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 EXTIP=`curl -s4 icanhazip.com`
 echo Please input your private key.
-read GENKEY
 
 mkdir -p /root/.privix && touch /root/.privix/privix.conf
 
