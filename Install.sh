@@ -147,16 +147,16 @@ sudo ufw limit ssh/tcp
 sudo ufw logging on
 echo "y" | sudo ufw enable
 sudo ufw status
-echo Server firewall configuration completed, will install VPN now.
+#echo Server firewall configuration completed, will install VPN now.
 
 sleep 5s
 
-echo Installing the VPN now!
+#echo Installing the VPN now!
 sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get -y install openvpn bind9 easy-rsa
 
 # Start of the config for open vpn, will need to edit more down the road need a working base for now.
-echo Adding required settings to config file.
+#echo Adding required settings to config file.
 cat << EOF > /etc/openvpn/server.conf
 
 server $EXTIP 255.255.255.0 
@@ -185,45 +185,45 @@ verb 4
 log-append /var/log/openvpn.log
 EOF
 
-echo "Let’s copy across the easy-rsa generation files"
+#echo "Let’s copy across the easy-rsa generation files"
 cp -r /usr/share/easy-rsa/ /etc/openvpn/
 
-echo "You can edit the variables in /etc/openvpn/easy-rsa/vars but this is not required and since we are wanting to set this up as quickly as possible we will skip this
+#echo "You can edit the variables in /etc/openvpn/easy-rsa/vars but this is not required and since we are wanting to set this up as quickly as possible we will skip this
 openssl dhparam -out /etc/openvpn/dh2048.pem 2048"
 
-echo "This will take some time and will output numerous dots and + signs."
+#echo "This will take some time and will output numerous dots and + signs."
 ./clean-all && ./build-ca
 
-echo "You will be asked to enter a bunch of variables, you can just keep pressing enter and use the default values"
+#echo "You will be asked to enter a bunch of variables, you can just keep pressing enter and use the default values"
 
-echo "Next let’s generate the server.key file"
+#echo "Next let’s generate the server.key file"
 ./build-key-server server
 
-echo "Just like above, you can keep pressing ENTER and use the default variables the only additional thing it will bring up is the certification request, you can use the default values for this too."
+#echo "Just like above, you can keep pressing ENTER and use the default variables the only additional thing it will bring up is the certification request, you can use the default values for this too."
 
 sleep 5s
 
-echo "When it asks you if you want to Sign the certificate? [y/n] Choose yes (enter y)"
+#echo "When it asks you if you want to Sign the certificate? [y/n] Choose yes (enter y)"
 
 sleep 5s
 
-echo "Choose yes (enter y) 1 out of 1 certificate requests certified, commit? [y/n] Choose yes (enter y)"
+#echo "Choose yes (enter y) 1 out of 1 certificate requests certified, commit? [y/n] Choose yes (enter y)"
 
 #Setting up iptables
-echo "You will need to know what your interface name is which you can get from ifconfig or alternatively use this command:"
+#echo "You will need to know what your interface name is which you can get from ifconfig or alternatively use this command:"
 iptables -t nat -A POSTROUTING -o `ip route get 8.8.8.8 | awk '{ print $5; exit }'` -j MASQUERADE
 
-echo "Now we have to enable IP forwarding by executing the following command:"
+#echo "Now we have to enable IP forwarding by executing the following command:"
 sudo sysctl -w net.ipv4.ip_forward=1
 
 #Add User Now
-echo "Adding User"
+#echo "Adding User"
 useradd vpnusername
 
-echo "Now set a password:"
+#echo "Now set a password:"
 passwd vpnusername
 
-echo "Restarting VPN"
+#echo "Restarting VPN"
 service openvpn restart
 
 echo "VPN install complete. "
