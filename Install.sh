@@ -149,7 +149,8 @@ echo "y" | sudo ufw enable
 sudo ufw status
 echo Server firewall configuration completed, will install VPN now.
 
-wait 10
+sleep 5s
+
 echo Installing the VPN now!
 sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get -y install openvpn bind9 easy-rsa
@@ -200,11 +201,11 @@ echo Next let’s generate the server.key file
 
 echo Just like above, you can keep pressing ENTER and use the default variables the only additional thing it will bring up is the certification request, you can use the default values for this too.
 
-wait 5
+sleep 5s
 
 echo When it asks you if you want to Sign the certificate? [y/n] Choose yes (enter y)
 
-wait 5
+sleep 5s
 
 echo Choose yes (enter y) 1 out of 1 certificate requests certified, commit? [y/n] Choose yes (enter y)
 
