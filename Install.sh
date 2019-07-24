@@ -200,9 +200,6 @@ useradd vpnusername
 passwd vpnusername
 service openvpn restart
 
-echo "VPN install complete. "
-
-
             ;;
 			3)
 			echo "Full list of commands: root@vpn-tutorial:/etc/openvpn# service openvpn Usage: /etc/init.d/openvpn {start|stop|reload|restart|force-reload|cond-restart|soft-restart|"
