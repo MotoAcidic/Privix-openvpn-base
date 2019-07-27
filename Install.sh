@@ -26,22 +26,22 @@ CHOICE=$(whiptail --clear\
 
 clear
 case $CHOICE in
-        1)
-		cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base/master/Scripts/Daemon/daemon-install.sh)"
+        1)	# Daemon	
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrb)"
         ;;
 	    
-        2)
-		cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base/master/Scripts/Masternode/masternode-install.sh)"
+        2)  # Masternode
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrN)"
 		;;
 
-		3)
-		cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base/master/Scripts/Update/update-install.sh)"
+		3)  # Update Daemon and CLI
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrA)"
 		;;
 
-		4)
-		cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base/master/Scripts/Ubuntu16.04/16-vpn-install.sh)"
+		4)  # Install VPN 16.04
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrp)"
 		;;
 
-		5)
-		cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base/master/Scripts/Ubuntu18/18-vpn-install.sh)"
+		5)  # Install VPN 18
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrh)"
 esac
