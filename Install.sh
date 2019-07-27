@@ -11,8 +11,8 @@ MENU="Choose one of the following options:"
 OPTIONS=(1 "Install Privix Daemon"
 		 2 "Install Privix Masternode"
 		 3 "Update Privix Daemon and CLI"
-         3 "Install Ubuntu 16.04 Privix VPN"
-		 4 "Install Ubuntu 18 Privix VPN"
+         4 "Install Ubuntu 16.04 Privix VPN"
+		 5 "Install Ubuntu 18 Privix VPN"
 )
 
 
