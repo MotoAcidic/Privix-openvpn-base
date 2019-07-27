@@ -109,4 +109,4 @@ echo Vpx Server Started Successfully using the command ./privixd -daemon
 echo If you get a message asking to rebuild the database, please hit Ctr + C and run ./privixd -daemon -reindex
 echo If you still have further issues please reach out to support in our Discord channel. 
 echo Please use the following Private Key when setting up your wallet: $GENKEY
-fi
+exit 0
