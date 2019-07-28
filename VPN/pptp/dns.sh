@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) 2019 Privix. Released under the MIT License.
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 source $DIR/env.sh
