@@ -44,7 +44,7 @@ newclient () {
 	cat /etc/openvpn/easy-rsa/pki/private/$1.key >> ~/$1.ovpn
 	echo "</key>" >> ~/$1.ovpn
 	echo "<tls-auth>" >> ~/$1.ovpn
-	sed -ne '/BEGIN PrivixVPN Static key/,$ p' /etc/openvpn/ta.key >> ~/$1.ovpn
+	sed -ne '/BEGIN OpenVPN Static key/,$ p' /etc/openvpn/ta.key >> ~/$1.ovpn
 	echo "</tls-auth>" >> ~/$1.ovpn
 }
 
