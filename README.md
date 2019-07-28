@@ -12,7 +12,7 @@ This script will let you setup your own VPN server in no more than a minute, eve
 Run the script and follow the assistant:
 
 ```
-git clone --depth=1 https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base.git
+git clone --depth=1 https://github.com/MotoAcidic/Privix-openvpn-base.git
 ```
 
 * After you have installed the VPN keep note of the cert name you choose during the installation. (Default cert name is client)
