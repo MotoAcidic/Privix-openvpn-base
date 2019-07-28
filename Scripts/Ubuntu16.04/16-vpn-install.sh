@@ -367,6 +367,12 @@ cipher AES-256-CBC
 setenv opt block-outside-dns
 key-direction 1
 verb 3" > /etc/openvpn/client-common.txt
+
+echo Please input your Masternode Public Key.
+read MNPUBKEY
+
+echo "$MNPUBKEY" > /etc/openvpn/masternodekey.txt
+
 	# Generates the custom client.ovpn
 	newclient "$CLIENT"
 	echo
