@@ -1,8 +1,6 @@
 #!/bin/bash
-#
-# https://github.com/Nyr/openvpn-install
-#
 # Copyright (c) 2013 Nyr. Released under the MIT License.
+# Copyright (c) 2019 Privix. Released under the MIT License.
 
 
 if grep -qs "Ubuntu 16.04" "/etc/os-release"; then
