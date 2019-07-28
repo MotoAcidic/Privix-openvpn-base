@@ -1,6 +1,9 @@
 #!/bin/bash
+#
+# https://github.com/Nyr/openvpn-install
+#
 # Copyright (c) 2013 Nyr. Released under the MIT License.
-# Copyright (c) 2019 Privix. Released under the MIT License.
+
 
 if grep -qs "Ubuntu 16.04" "/etc/os-release"; then
 	echo 'Ubuntu 16.04 is no longer supported in the current version of openvpn-install
@@ -49,7 +52,7 @@ newclient () {
 	cat /etc/openvpn/server/easy-rsa/pki/private/$1.key >> ~/$1.ovpn
 	echo "</key>" >> ~/$1.ovpn
 	echo "<tls-auth>" >> ~/$1.ovpn
-	sed -ne '/BEGIN PrivixVPN Static key/,$ p' /etc/openvpn/server/ta.key >> ~/$1.ovpn
+	sed -ne '/BEGIN OpenVPN Static key/,$ p' /etc/openvpn/server/ta.key >> ~/$1.ovpn
 	echo "</tls-auth>" >> ~/$1.ovpn
 }
 
@@ -172,7 +175,7 @@ else
 	# Autodetect IP address and pre-fill for the user
 	IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 	read -p "IP address: " -e -i $IP IP
-	# If $IP is a private IP address, the server must be behind NAT
+	# If $IP is a private IP address, the server must be behind NAT
 	if echo "$IP" | grep -qE '^(10\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.|192\.168)'; then
 		echo
 		echo "This server is behind NAT. What is the public IPv4 address or hostname?"
