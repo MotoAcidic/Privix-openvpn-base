@@ -17,3 +17,14 @@ Run the script and follow the assistant:
 cd &&  bash -c "$(wget -O - https://raw.githubusercontent.com/MotoAcidic/Privix-openvpn-base/master/Install.sh)"
 ```
 
+After you have installed the VPN keep note of the cert name you choose during the installation. (Default cert name is client)
+
+You will need to now export your cert you got during the install with a client like winscp [Winscp Install](https://winscp.net/eng/index.php)
+
+Navigate to cd /root/  and copy over your cert file to your desktop
+
+In order for your to connect to your vpn you will need to install either the openvpn gui here [OoenVpn GUI](https://openvpn.net/community-downloads/)
+or install [Pritunl](https://client.pritunl.com/)
+
+Once you have installed either gui client your will need to import the cert from above into the client and connect.
+
