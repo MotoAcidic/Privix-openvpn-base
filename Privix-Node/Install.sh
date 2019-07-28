@@ -11,8 +11,7 @@ MENU="Choose one of the following options:"
 OPTIONS=(1 "Install Privix Daemon"
 		 2 "Install Privix Masternode"
 		 3 "Update Privix Daemon and CLI"
-         4 "Install Ubuntu 16.04 Privix VPN"
-		 5 "Install Ubuntu 18 Privix VPN"
+         4 "Go Back"
 )
 
 
@@ -26,22 +25,20 @@ CHOICE=$(whiptail --clear\
 
 clear
 case $CHOICE in
-        1)	# Daemon	
-		cd &&  bash -c "$(wget -O - https://git.io/fjyrb)"
+        1)
+		cd &&  bash -c "$(wget -O - https://git.io/fjybW)"
         ;;
 	    
-        2)  # Masternode
-		cd &&  bash -c "$(wget -O - https://git.io/fjyrN)"
+        2)
+		cd &&  bash -c "$(wget -O - https://git.io/fjybl)"
 		;;
 
-		3)  # Update Daemon and CLI
-		cd &&  bash -c "$(wget -O - https://git.io/fjyrA)"
+		3)
+		cd &&  bash -c "$(wget -O - https://git.io/fjyb8)"
 		;;
 
-		4)  # Install VPN 16.04
-		cd &&  bash -c "$(wget -O - https://git.io/fjyrp)"
+		4)
+		cd &&  bash -c "$(wget -O - https://git.io/fjyb4)"
 		;;
 
-		5)  # Install VPN 18
-		cd &&  bash -c "$(wget -O - https://git.io/fjyrh)"
 esac

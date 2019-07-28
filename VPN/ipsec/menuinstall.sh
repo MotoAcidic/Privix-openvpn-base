@@ -8,8 +8,10 @@ BACKTITLE="VPX Setup Wizard"
 TITLE="VPX VPS Setup"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Go To Privix Node Setup"
-		 2 "Go To VPN Setup"
+OPTIONS=(1 "Install Brand New Privix IPSEC"
+		 2 "Add New User"
+		 3 "Delete User"
+         4 "Go Back"
 )
 
 
@@ -23,11 +25,19 @@ CHOICE=$(whiptail --clear\
 
 clear
 case $CHOICE in
-        1)	# Daemon	
-		cd &&  bash -c "$(wget -O - https://git.io/fjyrb)"
+        1)	# Fresh Install
+		cd &&  bash -c "$(wget -O - https://git.io/fjyb0)"
         ;;
 	    
-        2)  # Masternode
-		cd &&  bash -c "$(wget -O - https://git.io/fjybB)"
+        2)  # Add New User
+		cd &&  bash -c "$(wget -O - https://git.io/fjybu)"
+		;;
+
+		3)  # Delete User
+		cd &&  bash -c "$(wget -O - https://git.io/fjybz)"
+		;;
+
+		4)  # Go Back
+		cd &&  bash -c "$(wget -O - https://git.io/fjyb4)"
 		;;
 esac

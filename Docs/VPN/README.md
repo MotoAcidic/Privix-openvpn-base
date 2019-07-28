@@ -98,28 +98,28 @@ In the 'Security' tab of created connection check only MS-CHAP v2 protocol, then
 
 
 ## OpenVPN
-Server and client certificates and TLS auth are used for authentication (generating using Easy-RSA package, see [adduser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/adduser.sh) and [install.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/install.sh)).
+Server and client certificates and TLS auth are used for authentication (generating using Easy-RSA package, see [adduser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/adduser.sh) and [install.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/install.sh)).
 
-Used cipher: AES-256-CBC (see [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/openvpn-server.conf.dist)).
+Used cipher: AES-256-CBC (see [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/openvpn-server.conf.dist)).
 
-By default (see [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/openvpn-server.conf.dist) and [env.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/env.sh)) it uses 172.20.0.0/24 subnet.
+By default (see [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/openvpn-server.conf.dist) and [env.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/env.sh)) it uses 172.20.0.0/24 subnet.
 Port 1194 (default).
 
 ### Files
-* [adduser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/adduser.sh) - script for user-friendly client config and key+certificate generating.
-* [autostart.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/autostart.sh) - script for adding cron jobs (iptables restoring after boot and server running state checking).
-* [backup.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/backup.sh) - script for backuping system config files, parameters, services and packages statuses and uninstall script generating.
-* [checkserver.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/checkserver.sh) - script for cron job, which check server running state.
-* [checkuser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/checkuser.sh) - script for user-friendly existing user checking.
-* [deluser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/deluser.sh) - script for user-friendly existing user removing (certificate revoking).
-* [dns.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/dns.sh) - script for user-friendly modifiying of DNS-resolver settings which will be pushed to Windows clients.
-* [env.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/env.sh) - common for all scripts config variables (subnet, ip, config files paths).
-* [install.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/install.sh) - main installation script (wizard).
-* [iptables-setup.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/iptables-setup.sh) - iptables configuration script.
-* [openvpn-server-embedded.ovpn.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/openvpn-server-embedded.ovpn.dist) - client config file with embedded keys and certificates template.
-* [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/openvpn-server.conf.dist) - OpenVPN server [config file](https://openvpn.net/index.php/open-source/documentation/howto.html) template.
-* [openvpn-server.ovpn.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/openvpn-server.ovpn.dist) - client config file template.
-* [sysctl.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//openvpn/sysctl.sh) - script for set up IP forwarding and disabling some packets due to security reasons (using sysctl).
+* [adduser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/adduser.sh) - script for user-friendly client config and key+certificate generating.
+* [autostart.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/autostart.sh) - script for adding cron jobs (iptables restoring after boot and server running state checking).
+* [backup.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/backup.sh) - script for backuping system config files, parameters, services and packages statuses and uninstall script generating.
+* [checkserver.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/checkserver.sh) - script for cron job, which check server running state.
+* [checkuser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/checkuser.sh) - script for user-friendly existing user checking.
+* [deluser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/deluser.sh) - script for user-friendly existing user removing (certificate revoking).
+* [dns.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/dns.sh) - script for user-friendly modifiying of DNS-resolver settings which will be pushed to Windows clients.
+* [env.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/env.sh) - common for all scripts config variables (subnet, ip, config files paths).
+* [install.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/install.sh) - main installation script (wizard).
+* [iptables-setup.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/iptables-setup.sh) - iptables configuration script.
+* [openvpn-server-embedded.ovpn.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/openvpn-server-embedded.ovpn.dist) - client config file with embedded keys and certificates template.
+* [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/openvpn-server.conf.dist) - OpenVPN server [config file](https://openvpn.net/index.php/open-source/documentation/howto.html) template.
+* [openvpn-server.ovpn.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/openvpn-server.ovpn.dist) - client config file template.
+* [sysctl.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/sysctl.sh) - script for set up IP forwarding and disabling some packets due to security reasons (using sysctl).
 
 ### Client
 **On Linux:**
