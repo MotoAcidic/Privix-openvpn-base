@@ -8,8 +8,11 @@ BACKTITLE="VPX Setup Wizard"
 TITLE="VPX VPS Setup"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Go To Privix Node Setup"
-		 2 "Go To VPN Setup"
+OPTIONS=(1 "Install Privix Daemon"
+		 2 "Install Privix Masternode"
+		 3 "Update Privix Daemon and CLI"
+         4 "Install Ubuntu 16.04 Privix VPN"
+		 5 "Install Ubuntu 18 Privix VPN"
 )
 
 
@@ -30,4 +33,15 @@ case $CHOICE in
         2)  # Masternode
 		cd &&  bash -c "$(wget -O - https://git.io/fjyrN)"
 		;;
+
+		3)  # Update Daemon and CLI
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrA)"
+		;;
+
+		4)  # Install VPN 16.04
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrp)"
+		;;
+
+		5)  # Install VPN 18
+		cd &&  bash -c "$(wget -O - https://git.io/fjyrh)"
 esac
