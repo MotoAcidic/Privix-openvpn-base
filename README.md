@@ -15,6 +15,18 @@ Run the script and follow the assistant:
 git clone --depth=1 https://github.com/MotoAcidic/Privix-openvpn-base.git
 ```
 
+```
+sudo chmod -R 755 Privix-openvpn-base
+```
+
+```
+cd Privix-openvpn-base
+```
+
+```
+bash install.sh
+```
+
 * After you have installed the VPN keep note of the cert name you choose during the installation. (Default cert name is client)
 
 * You will need to now export your cert you got during the install with a client like winscp [Winscp Install](https://winscp.net/eng/index.php)
