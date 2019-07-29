@@ -35,7 +35,7 @@ case $CHOICE in
 		;;
 
 		3)  # VPN
-		cd /VPN/privixnode/
+		cd /VPN/privixvpn/
 		bash menuinstall.sh
 		;;
 
