@@ -24,7 +24,7 @@ cd Privix-openvpn-base
 ```
 
 ```
-bash install.sh
+bash Install.sh
 ```
 
 * After you have installed the VPN keep note of the cert name you choose during the installation. (Default cert name is client)
