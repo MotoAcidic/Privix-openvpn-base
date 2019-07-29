@@ -30,14 +30,17 @@ case $CHOICE in
         ;;
 	    
         2)  # IPSEC
-		cd &&  bash -c "$(wget -O - https://git.io/fjyAq)"
+		cd /VPN/ipsec/
+		bash menuinstall.sh
 		;;
 
 		3)  # VPN
-		cd &&  bash -c "$(wget -O - https://git.io/fjybM)"
+		cd /VPN/privixnode/
+		bash menuinstall.sh
 		;;
 
 		4)  # PPTP
-		cd &&  bash -c "$(wget -O - https://git.io/fjyb1)"
+		cd /VPN/pptp/
+		bash buildmenuinstall.sh
 		;;
 esac
