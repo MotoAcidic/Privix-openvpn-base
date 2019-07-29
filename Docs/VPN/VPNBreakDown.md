@@ -1,19 +1,11 @@
-# vpn-install
-Simple PPTP, L2TP/IPsec, OpenVPN installers for fast, user-friendly deployment.
-
-## Features
+## Privix VPN Features
 * PPTP, OpenVPN, IPsec VPN support
 * User-friendly installation and configuration process
 * VPN client-side configs and script generating 
 * Backup and uninstallion support
 * Users control (add, check, delete) scripts, autorestarting, iptables automation.
 
-## Requirements
-* Ubuntu (tested on Ubuntu 16.04, Ubuntu 17.04)
-* Debian (tested on Debian 9)
-* CentOS (tested on CentOS 7)
-
-## PPTP
+## Privix PPTP VPN
 Only MS-CHAP v2 with MPPE-128 encryption is allowed. 
 
 Note that PPTP is **NOT** recommended for transmission secret data, because all strong PPTP authentication algorithms have been already hacked: see [link](https://isc.sans.edu/forums/diary/End+of+Days+for+MSCHAPv2/13807/) for more information.
@@ -48,7 +40,7 @@ You can also use Ubuntu standard Network Manager for PPTP VPN connection.
 Create new VPN-connection using standart 'Set up a new connection or network' wizard, select PPTP VPN and provide host, login and password information. In the 'Security' tab of created connection check only MS-CHAP v2 protocol.
 
 
-## IPsec
+## Privix IPsec VPN
 IPsec over L2TP VPN server with pre-shared key. 
 
 Only MS-CHAP v2 is allowed on L2TP. 
@@ -97,7 +89,7 @@ Create new VPN-connection using standart 'Set up a new connection or network' wi
 In the 'Security' tab of created connection check only MS-CHAP v2 protocol, then enter to 'Advanced settings' and enter your pre-shared key.
 
 
-## OpenVPN
+## Privix VPN
 Server and client certificates and TLS auth are used for authentication (generating using Easy-RSA package, see [adduser.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/adduser.sh) and [install.sh](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/install.sh)).
 
 Used cipher: AES-256-CBC (see [openvpn-server.conf.dist](https://github.com/MotoAcidic/Privix-openvpn-base/tree/master/VPN//privixvpn/openvpn-server.conf.dist)).
@@ -150,3 +142,4 @@ During installation script will backup config files which are in system and will
 * `vpn-install/ipsec/uninstall/uninstall.sh`
 
 These "wizards" will uninstall installed packages, restore system config files (which was before installation), remove added iptables  rules and cron jobs.
+
