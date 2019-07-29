@@ -30,17 +30,19 @@ case $CHOICE in
         ;;
 	    
         2)  # IPSEC
-		cd /VPN/ipsec/
+		cd VPN
+		cd ipsec
 		bash menuinstall.sh
 		;;
 
 		3)  # VPN
-		cd /VPN/privixvpn/
+		cd VPN
+		cd privixvpn
 		bash menuinstall.sh
 		;;
 
 		4)  # PPTP
-		cd /VPN/pptp/
-		bash buildmenuinstall.sh
+		cd pptp
+		cd privixvpn
 		;;
 esac
