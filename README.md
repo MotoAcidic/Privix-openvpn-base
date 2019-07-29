@@ -31,5 +31,15 @@ cd Privix-openvpn-base
 bash Install.sh
 ```
 
-### After install documents
+### All documents
 To connect to your new Privix VPN through a VPN GUI follow this document [Documentation](https://github.com/MotoAcidic/Privix-openvpn-base/Docs/)
+
+**Have fun, this is crypto after all!**
+
+```
+BTC  1MaxQQxJjnrxxfVvPncb2wsVpTKQu1drH7
+```
+
+
+Feel free to use my reflink to signup and receive a bonus w/ vultr:
+<a href="https://www.vultr.com/?ref=6903922"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>
